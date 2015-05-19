@@ -1580,7 +1580,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getGenemu_Form_Core_Type_TinymceService()
     {
-        return $this->services['genemu.form.core.type.tinymce'] = new \Genemu\Bundle\FormBundle\Form\Core\Type\TinymceType(array('script_url' => 'js/tinymce/tinymce.min.js', 'theme' => 'advanced'));
+        return $this->services['genemu.form.core.type.tinymce'] = new \Genemu\Bundle\FormBundle\Form\Core\Type\TinymceType(array('theme' => 'modern'));
     }
 
     /**
@@ -5206,8 +5206,7 @@ class appDevDebugProjectContainer extends Container
                 'code' => NULL,
             ),
             'genemu.form.tinymce.configs' => array(
-                'script_url' => 'js/tinymce/tinymce.min.js',
-                'theme' => 'advanced',
+                'theme' => 'modern',
             ),
             'genemu.form.color.options' => array(
 

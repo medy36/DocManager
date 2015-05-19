@@ -137,49 +137,29 @@ class __TwigTemplate_1b7064dfd4c5583fb1875318f4b7961de52149918df3cad764f4e000b76
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
         // line 48
         echo "
-
-
-
  \t";
-        // line 52
+        // line 49
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo " 
 \t\t";
-        // line 53
+        // line 50
         ob_start();
-        // line 54
+        // line 51
         echo "\t     <div class=\"form-group\">\t\t   
 \t\t    <div class=\"col-md-4\">
-\t\t\t<button type=\"submit\" class=\"btn btn-primary\">Submit</button>
+\t\t\t<button type=\"submit\" formnovalidate = \"true\" class=\"btn btn-primary\">Submit</button>
 \t\t\t </div>
 \t\t </div>\t
 \t\t  \t";
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-        // line 60
+        // line 57
         echo "\t  
 \t</fieldset>
 \t";
-        // line 62
+        // line 59
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
-
-
-\t<!-- <form role=\"form\">
-\t  <div class=\"form-group\">
-\t    <label for=\"email\">Email address:</label>
-\t    <input type=\"email\" class=\"form-control\" id=\"email\">
-\t  </div>
-\t  <div class=\"form-group\">
-\t    <label for=\"pwd\">Password:</label>
-\t    <input type=\"password\" class=\"form-control\" id=\"pwd\">
-\t  </div>
-\t  <div class=\"checkbox\">
-\t    <label><input type=\"checkbox\"> Remember me</label>
-\t  </div>
-\t  <button type=\"submit\" class=\"btn btn-default\">Submit</button>
-</form>
- -->
 ";
     }
 
@@ -195,6 +175,6 @@ class __TwigTemplate_1b7064dfd4c5583fb1875318f4b7961de52149918df3cad764f4e000b76
 
     public function getDebugInfo()
     {
-        return array (  163 => 62,  159 => 60,  151 => 54,  149 => 53,  145 => 52,  139 => 48,  133 => 45,  129 => 44,  126 => 43,  124 => 42,  121 => 41,  115 => 38,  111 => 37,  107 => 36,  104 => 35,  102 => 34,  99 => 33,  93 => 30,  89 => 29,  85 => 28,  82 => 27,  80 => 26,  77 => 25,  71 => 22,  67 => 21,  63 => 20,  59 => 18,  57 => 17,  51 => 14,  46 => 12,  40 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  160 => 59,  156 => 57,  148 => 51,  146 => 50,  142 => 49,  139 => 48,  133 => 45,  129 => 44,  126 => 43,  124 => 42,  121 => 41,  115 => 38,  111 => 37,  107 => 36,  104 => 35,  102 => 34,  99 => 33,  93 => 30,  89 => 29,  85 => 28,  82 => 27,  80 => 26,  77 => 25,  71 => 22,  67 => 21,  63 => 20,  59 => 18,  57 => 17,  51 => 14,  46 => 12,  40 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 }

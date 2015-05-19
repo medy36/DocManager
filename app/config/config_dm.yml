@@ -30,6 +30,5 @@ vich_uploader:
 genemu_form:
     date: ~
     tinymce:
-        script_url: 'js/tinymce/tinymce.min.js'
         enabled: true
-        theme:   advanced
+        theme:   modern

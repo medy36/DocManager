@@ -20,18 +20,23 @@ class __TwigTemplate_a98841ff000ff2a87d60f1bef38350746a794686a53d968563bb2e9692a
         $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_f4634a1_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/f4634a1_custom_1.js");
         // line 7
         echo "     <script src=\"http://code.jquery.com/jquery-1.9.1.js\"></script>
-       <script type=\"text/javascript\" src=\"/bundles/genemuform/tinymce/jscripts/tiny_mce/tiny_mce.js\"></script>
-            ";
+     <script src=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/tinymce/tinymce.min.js"), "html", null, true);
+        echo "\"></script>
+     ";
         // line 9
         if (array_key_exists("form", $context)) {
             // line 10
-            echo "                ";
+            echo "     ";
             echo $this->env->getExtension('genemu.twig.extension.form')->renderJavascript((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")));
             echo "
-            ";
+     ";
         }
         // line 12
-        echo "    <script type=\"text/javascript\" src=\"";
+        echo "
+    <script type=\"text/javascript\" src=\"";
+        // line 13
         echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
         echo "\"></script>
  
@@ -39,7 +44,7 @@ class __TwigTemplate_a98841ff000ff2a87d60f1bef38350746a794686a53d968563bb2e9692a
    <!-- Latest compiled and minified JavaScript -->
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js\"></script>
 \t<script type=\"text/javascript\" src=\"";
-        // line 17
+        // line 18
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/uran1980fancybox/js/fancybox/source/jquery.fancybox.pack.js"), "html", null, true);
         echo "\"></script>
 
@@ -47,7 +52,7 @@ class __TwigTemplate_a98841ff000ff2a87d60f1bef38350746a794686a53d968563bb2e9692a
 
 ";
         unset($context["asset_url"]);
-        // line 22
+        // line 23
         echo "
 ";
     }
@@ -64,6 +69,6 @@ class __TwigTemplate_a98841ff000ff2a87d60f1bef38350746a794686a53d968563bb2e9692a
 
     public function getDebugInfo()
     {
-        return array (  51 => 22,  43 => 17,  34 => 12,  28 => 10,  26 => 9,  22 => 7,  19 => 1,);
+        return array (  56 => 23,  48 => 18,  40 => 13,  37 => 12,  31 => 10,  29 => 9,  25 => 8,  22 => 7,  19 => 1,);
     }
 }

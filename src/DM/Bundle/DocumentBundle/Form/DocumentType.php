@@ -15,10 +15,10 @@ class DocumentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titre')            
-            ->add('description','genemu_tinymce', array(
-                      'required' => false
-            ))
+            ->add('titre')               
+            ->add('description','genemu_tinymce',array(
+                'required'=> true
+                ))
             ->add('createdOrigineAt','genemu_jquerydate', array(
                     'widget' => 'single_text'
                 ))

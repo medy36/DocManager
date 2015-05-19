@@ -651,8 +651,7 @@
       <parameter key="code">null</parameter>
     </parameter>
     <parameter key="genemu.form.tinymce.configs" type="collection">
-      <parameter key="script_url">js/tinymce/tinymce.min.js</parameter>
-      <parameter key="theme">advanced</parameter>
+      <parameter key="theme">modern</parameter>
     </parameter>
     <parameter key="genemu.form.color.options" type="collection"/>
     <parameter key="genemu.form.date.options" type="collection"/>
@@ -3018,8 +3017,7 @@
     <service id="genemu.form.core.type.tinymce" class="Genemu\Bundle\FormBundle\Form\Core\Type\TinymceType">
       <tag name="form.type" alias="genemu_tinymce"/>
       <argument type="collection">
-        <argument key="script_url">js/tinymce/tinymce.min.js</argument>
-        <argument key="theme">advanced</argument>
+        <argument key="theme">modern</argument>
       </argument>
     </service>
     <service id="genemu.form.model.type.ajaxmodel" class="Genemu\Bundle\FormBundle\Form\Model\Type\AjaxModelType">
