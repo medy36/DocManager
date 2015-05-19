@@ -1,0 +1,35 @@
+knp_gaufrette:
+    stream_wrapper: ~
+
+    adapters:
+        document_adapter:
+            local:
+                directory: %kernel.root_dir%/../web/cdn/document
+        # avatar_adapter:
+        #     local:
+        #         directory: %kernel.root_dir%/../web/cdn/user
+
+    filesystems:
+        document_picture_fs:
+            adapter:    document_adapter
+        # user_avatar_fs:
+        #     adapter:    avatar_adapter
+vich_uploader:
+    db_driver: orm
+    storage:   gaufrette
+
+    mappings:
+        document_image:
+            uri_prefix:         /cdn/document
+            upload_destination: document_picture_fs
+            inject_on_load:     true
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid
+
+genemu_form:
+    date: ~
+    tinymce:
+        script_url: 'js/tinymce/tinymce.min.js'
+        enabled: true
+        theme:   advanced

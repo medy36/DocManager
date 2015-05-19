@@ -1,0 +1,7 @@
+dm_resource:
+    resource: "@DMResourceBundle/Resources/config/routing.yml"
+    prefix:   /
+
+dm_document:
+    resource: "@DMDocumentBundle/Controller/"
+    type:  annotation

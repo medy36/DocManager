@@ -1,0 +1,81 @@
+{% extends "DMResourceBundle::layout.html.twig" %}
+
+{% block title %}
+    <title>Document Manager</title>
+{% endblock %}
+
+{% block content %}
+
+	<h1> insert a new Archive</h1>
+
+
+	{{ form_start(form, {'action': path('post_new_document'), 'method': 'POST', 'class': 'form-horizontal'}) }}
+	<fieldset>
+	 {{ form_errors(form) }}
+
+
+	{% spaceless %}
+
+	  <div class="form-group">
+	    <label for="">{{ form_label(form.titre) }}</label>
+	       {{ form_widget(form.titre, {'attr': {class:'form-control'}}) }}
+	         <span class="text-danger">  {{ form_errors(form.titre) }} </span>  
+	  </div>		
+	{% endspaceless %}
+
+	{% spaceless %}
+		 <div class="form-group">
+		    <label for=""> {{ form_label(form.description) }}</label>
+		 {{ form_widget(form.description, {'attr': {class:'form-control'}}) }}
+		   <span class="text-danger">  {{ form_errors(form.description) }} </span>  
+		  </div>		
+	{% endspaceless %}
+
+	{% spaceless %}
+		 <div class="form-group">
+		    <label for=""> {{ form_label(form.createdOrigineAt) }}</label>
+			 {{ form_widget(form.createdOrigineAt, {'attr': {'class': 'form-control datepicker'}}) }} 
+			   <span class="text-danger">  {{ form_errors(form.createdOrigineAt) }} </span>  
+			 </div>		
+	{% endspaceless %}
+
+	{% spaceless %}
+		 <div class="form-group">	 
+			 {{ form_widget(form.file) }} 
+			   <span class="text-danger">  {{ form_errors(form.file) }} </span> 
+		  </div>		
+	{% endspaceless %}
+
+
+
+
+ 	{{ form_rest(form) }} 
+		{% spaceless %}
+	     <div class="form-group">		   
+		    <div class="col-md-4">
+			<button type="submit" class="btn btn-primary">Submit</button>
+			 </div>
+		 </div>	
+		  	{% endspaceless %}
+	  
+	</fieldset>
+	{{ form_end(form) }}
+
+
+
+	<!-- <form role="form">
+	  <div class="form-group">
+	    <label for="email">Email address:</label>
+	    <input type="email" class="form-control" id="email">
+	  </div>
+	  <div class="form-group">
+	    <label for="pwd">Password:</label>
+	    <input type="password" class="form-control" id="pwd">
+	  </div>
+	  <div class="checkbox">
+	    <label><input type="checkbox"> Remember me</label>
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+ -->
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "DMResourceBundle::layout.html.twig" %}
+
+{% block title %}
+    <title>{{ document.titre }} - New application</title>
+{% endblock %}
+
+{% block content %}
+
+ <div class="col-md-9">
+
+    <div class="thumbnail">
+        <a id="single_1" class="fancybox" href="{{ vich_uploader_asset(document, 'file') }}" ><img  src="{{ vich_uploader_asset(document, 'file') }}" alt="{{ document.imageName }}" /></a>
+         
+             <div class="caption-full">
+            	<h4 class="pull-right">{{ document.createdOrigineAt|date('Y-m-d') }}</h4>
+	            <h4><a href="#">{{ document.titre }}</a></h4>
+	            
+	            <p>{{ document.description}}</p>
+
+	            <h4 class="pull-left">  Posted at:{{document.createdAt|date('Y-m-d')}}</h4>
+	           
+	        </div>
+    </div>
+</div>
+
+{% endblock %}
+

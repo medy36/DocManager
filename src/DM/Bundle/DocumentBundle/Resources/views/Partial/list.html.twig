@@ -1,0 +1,23 @@
+{% extends "DMResourceBundle::layout.html.twig" %}
+
+{% block title %}
+    <title>List - New application</title>
+{% endblock %}
+
+{% block content %}
+
+	<!-- Page Content -->
+    <div id="page-content-wrapper">       
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+					<h1>Welcome to the Post:index page</h1>
+					{% for document in documents %}
+						<h1><a href="{{ path("document_details", {'slug': document.id}) }}">{{ document.titre }}</a><h1>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock content %}
