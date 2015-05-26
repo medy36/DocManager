@@ -18,17 +18,23 @@ class __TwigTemplate_9ebb2c54d96bd72b11f461b8582c3e4c17912b77bb6664e58c129fcb702
         // line 1
         // asset "a2438c7_0"
         $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_a2438c7_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/css/a2438c7_shop-item_1.css");
-        // line 9
+        // line 7
         echo "    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\">
+\t<link rel=\"stylesheet\" src=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/uran1980fancybox/js/fancybox/source/jquery.fancybox.css"), "html", null, true);
+        echo "\">
+    
 \t<link href=\"";
         // line 10
         echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
         echo "\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" />
 
 
+
 ";
         unset($context["asset_url"]);
-        // line 14
+        // line 15
         echo "
 
 ";
@@ -46,6 +52,6 @@ class __TwigTemplate_9ebb2c54d96bd72b11f461b8582c3e4c17912b77bb6664e58c129fcb702
 
     public function getDebugInfo()
     {
-        return array (  32 => 14,  25 => 10,  22 => 9,  19 => 1,);
+        return array (  38 => 15,  30 => 10,  25 => 8,  22 => 7,  19 => 1,);
     }
 }

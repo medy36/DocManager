@@ -22,47 +22,44 @@ class __TwigTemplate_39d547c1ecdc9ad5d417548ee50e9d19e2c577050c67fe01ec85190cdd3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
+        // line 2
+        $context["ActivePage"] = "listArchives";
+        // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 4
     public function block_title($context, array $blocks = array())
     {
-        // line 4
+        // line 5
         echo "    <title>List - New application</title>
 ";
     }
 
-    // line 7
+    // line 8
     public function block_content($context, array $blocks = array())
     {
-        // line 8
+        // line 9
         echo "
 \t<!-- Page Content -->
     <div id=\"page-content-wrapper\">       
 
         <div class=\"container-fluid\">
             <div class=\"row\">
-                <div class=\"col-md-10 col-md-offset-1\">
-\t\t\t\t\t<h1>Welcome to the Post:index page</h1>
-\t\t\t\t\t";
-        // line 16
-        $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["documents"]) ? $context["documents"] : $this->getContext($context, "documents")));
-        foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-            // line 17
-            echo "\t\t\t\t\t\t<h1><a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("document_details", array("slug" => $this->getAttribute($context["document"], "id", array()))), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "titre", array()), "html", null, true);
-            echo "</a><h1>
-\t\t\t\t\t";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
-        echo "\t\t\t\t</div>
+                <div ng-controller=\"docList\" class=\"col-md-10 col-md-offset-1\">
+                \t<h1>Welcome to the Post:index page</h1>
+                \t";
+        // line 23
+        echo "
+                \t\t<div ng-repeat=\"document in documents\">
+                \t\t\thello:
+\t                \t  <h1>{{ document.titre }}<h1>
+\t                \t</div>
+                \t\t
+                \t";
+        echo "
+                \t
+\t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
 \t</div>
@@ -81,6 +78,6 @@ class __TwigTemplate_39d547c1ecdc9ad5d417548ee50e9d19e2c577050c67fe01ec85190cdd3
 
     public function getDebugInfo()
     {
-        return array (  65 => 19,  54 => 17,  50 => 16,  40 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  53 => 23,  43 => 9,  40 => 8,  35 => 5,  32 => 4,  28 => 1,  26 => 2,  11 => 1,);
     }
 }

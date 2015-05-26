@@ -1,4 +1,5 @@
 {% extends "DMResourceBundle::layout.html.twig" %}
+{% set ActivePage = "listArchives" %}
 
 {% block title %}
     <title>List - New application</title>
@@ -11,11 +12,16 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-					<h1>Welcome to the Post:index page</h1>
-					{% for document in documents %}
-						<h1><a href="{{ path("document_details", {'slug': document.id}) }}">{{ document.titre }}</a><h1>
-					{% endfor %}
+                <div ng-controller="docList" class="col-md-10 col-md-offset-1">
+                	<h1>Welcome to the Post:index page</h1>
+                	{% verbatim %}
+                		<div ng-repeat="document in documents">
+                			hello:
+	                	  <h1>{{ document.titre }}<h1>
+	                	</div>
+                		
+                	{% endverbatim %}
+                	
 				</div>
 			</div>
 		</div>

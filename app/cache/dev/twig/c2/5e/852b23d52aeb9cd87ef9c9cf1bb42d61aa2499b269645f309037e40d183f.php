@@ -39,14 +39,16 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
     ";
         // line 11
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 14
-        echo "
-    
+        // line 13
+        echo " 
+        <script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js\"></script>  
+
+
   </head>
-  <body>
+  <body ng-app=\"docManager\">
    <!-- Navigation -->
     <nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">
-        <div class=\"container\">
+        <div class=\"container\" ng-controller=\"menuCtrl\">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class=\"navbar-header\">
                 <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">
@@ -55,13 +57,16 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
                     <span class=\"icon-bar\"></span>
                     <span class=\"icon-bar\"></span>
                 </button>
-                <a class=\"navbar-brand\" href=\"#\">D.M</a>
+                <a class=\"navbar-brand\" href=\"#\">D.M ";
+        // line 30
+        echo " {{ firstName }} ";
+        echo " </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                 <ul class=\"nav navbar-nav\">
                     <li>
-                        <a href=\"#\">About</a>
+                        <a class=\"btn\" ng-click=\"setRoute('about')\">About</a>
                     </li>
                     <li>
                         <a href=\"#\">Services</a>
@@ -76,6 +81,7 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
         <!-- /.container -->
     </nav>
 
+
      <!-- Page Content -->
     <div class=\"container\">
 
@@ -85,14 +91,27 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
                 <p class=\"lead\">Document Manager</p>
                 <div class=\"list-group\">
                     <a href=\"";
-        // line 58
+        // line 60
         echo $this->env->getExtension('routing')->getPath("post_new_document");
-        echo "\" class=\"list-group-item active\">add new doc</a>
+        echo "\" class=\"list-group-item ";
+        if (((isset($context["ActivePage"]) ? $context["ActivePage"] : $this->getContext($context, "ActivePage")) == "newArchive")) {
+            echo " active ";
+        }
+        echo "\">add new doc</a>
                     <a href=\"";
-        // line 59
+        // line 61
         echo $this->env->getExtension('routing')->getPath("list_documents");
-        echo "\" class=\"list-group-item\">list Docs</a>
-                    <a href=\"#\" class=\"list-group-item\">Docs Logs</a>
+        echo "\" class=\"list-group-item ";
+        if (((isset($context["ActivePage"]) ? $context["ActivePage"] : $this->getContext($context, "ActivePage")) == "listArchives")) {
+            echo " active ";
+        }
+        echo "\">list Docs</a>
+                    <a href=\"#\" class=\"list-group-item ";
+        // line 62
+        if (((isset($context["ActivePage"]) ? $context["ActivePage"] : $this->getContext($context, "ActivePage")) == "logArchive")) {
+            echo " active ";
+        }
+        echo "\">Docs Logs</a>
                 </div>
             </div>
 
@@ -100,17 +119,17 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
 
                
 
-                <div class=\"well\">                 
+                <div class=\"well\">         
        
-
+                This is a simple document manager!
                    
 
                 </div>
 
                  ";
-        // line 75
+        // line 77
         $this->displayBlock('content', $context, $blocks);
-        // line 78
+        // line 80
         echo "
             </div>
 
@@ -119,9 +138,9 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
 
 
     ";
-        // line 85
+        // line 87
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 88
+        // line 90
         echo "
     
 </body>
@@ -144,21 +163,21 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
     ";
     }
 
-    // line 75
+    // line 77
     public function block_content($context, array $blocks = array())
     {
-        // line 76
+        // line 78
         echo "          
         ";
     }
 
-    // line 85
+    // line 87
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 86
+        // line 88
         echo "     ";
-        $this->loadTemplate("DMResourceBundle:Partial:_javascripts.html.twig", "DMResourceBundle::layout.html.twig", 86)->display($context);
-        // line 87
+        $this->loadTemplate("DMResourceBundle:Partial:_javascripts.html.twig", "DMResourceBundle::layout.html.twig", 88)->display($context);
+        // line 89
         echo "    ";
     }
 
@@ -174,6 +193,6 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
 
     public function getDebugInfo()
     {
-        return array (  162 => 87,  159 => 86,  156 => 85,  151 => 76,  148 => 75,  141 => 12,  138 => 11,  133 => 8,  125 => 88,  123 => 85,  114 => 78,  112 => 75,  93 => 59,  89 => 58,  43 => 14,  41 => 11,  37 => 9,  35 => 8,  31 => 7,  23 => 1,);
+        return array (  181 => 89,  178 => 88,  175 => 87,  170 => 78,  167 => 77,  160 => 12,  157 => 11,  152 => 8,  144 => 90,  142 => 87,  133 => 80,  131 => 77,  111 => 62,  103 => 61,  95 => 60,  62 => 30,  43 => 13,  41 => 11,  37 => 9,  35 => 8,  31 => 7,  23 => 1,);
     }
 }

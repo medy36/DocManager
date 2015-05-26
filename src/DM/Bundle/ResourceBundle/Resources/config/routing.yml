@@ -1,3 +1,7 @@
 dm_resource_homepage:
     path:     /hello/{name}
     defaults: { _controller: DMResourceBundle:Default:index }
+
+angularjs_test:
+    path: /angularjs
+    defaults: { _controller: DMResourceBundle:Default:ngtest }

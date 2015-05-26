@@ -1,3 +1,7 @@
+dm_user:
+    resource: "@DMUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 dm_resource:
     resource: "@DMResourceBundle/Resources/config/routing.yml"
     prefix:   /
@@ -5,3 +9,6 @@ dm_resource:
 dm_document:
     resource: "@DMDocumentBundle/Controller/"
     type:  annotation
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

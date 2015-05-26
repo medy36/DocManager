@@ -44,11 +44,12 @@ return array (
       ),
     ),
   ),
-  'f4634a1' => 
+  '47fc26e' => 
   array (
     0 => 
     array (
       0 => '@DMResourceBundle/Resources/public/js/custom.js',
+      1 => '@DMResourceBundle/Resources/public/js/angularCtrls.js',
     ),
     1 => 
     array (
@@ -56,8 +57,8 @@ return array (
     ),
     2 => 
     array (
-      'output' => '_controller/js/f4634a1.js',
-      'name' => 'f4634a1',
+      'output' => '_controller/js/47fc26e.js',
+      'name' => '47fc26e',
       'debug' => NULL,
       'combine' => false,
       'vars' => 

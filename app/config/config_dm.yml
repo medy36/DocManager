@@ -32,3 +32,6 @@ genemu_form:
     tinymce:
         enabled: true
         theme:   modern
+
+fos_js_routing:
+    routes_to_expose: [ list_documents, api_list]

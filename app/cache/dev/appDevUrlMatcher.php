@@ -72,15 +72,23 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/js/f4634a1')) {
-            // _assetic_f4634a1
-            if ($pathinfo === '/js/f4634a1.js') {
-                return array (  '_controller' => 'assetic.controller:render',  'name' => 'f4634a1',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_f4634a1',);
+        if (0 === strpos($pathinfo, '/js/47fc26e')) {
+            // _assetic_47fc26e
+            if ($pathinfo === '/js/47fc26e.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '47fc26e',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_47fc26e',);
             }
 
-            // _assetic_f4634a1_0
-            if ($pathinfo === '/js/f4634a1_custom_1.js') {
-                return array (  '_controller' => 'assetic.controller:render',  'name' => 'f4634a1',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_f4634a1_0',);
+            if (0 === strpos($pathinfo, '/js/47fc26e_')) {
+                // _assetic_47fc26e_0
+                if ($pathinfo === '/js/47fc26e_custom_1.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '47fc26e',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_47fc26e_0',);
+                }
+
+                // _assetic_47fc26e_1
+                if ($pathinfo === '/js/47fc26e_angularCtrls_2.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '47fc26e',  'pos' => 1,  '_format' => 'js',  '_route' => '_assetic_47fc26e_1',);
+                }
+
             }
 
         }
@@ -185,9 +193,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // dm_resource_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'dm_resource_homepage')), array (  '_controller' => 'DM\\Bundle\\ResourceBundle\\Controller\\DefaultController::indexAction',));
+        if (0 === strpos($pathinfo, '/hello')) {
+            // dm_user_homepage
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'dm_user_homepage')), array (  '_controller' => 'DM\\Bundle\\UserBundle\\Controller\\DefaultController::indexAction',));
+            }
+
+            // dm_resource_homepage
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'dm_resource_homepage')), array (  '_controller' => 'DM\\Bundle\\ResourceBundle\\Controller\\DefaultController::indexAction',));
+            }
+
+        }
+
+        // angularjs_test
+        if ($pathinfo === '/angularjs') {
+            return array (  '_controller' => 'DM\\Bundle\\ResourceBundle\\Controller\\DefaultController::ngtestAction',  '_route' => 'angularjs_test',);
         }
 
         // new_document_page
@@ -200,6 +221,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'DM\\Bundle\\DocumentBundle\\Controller\\DefaultController::listDocumentsAction',  '_route' => 'list_documents',);
         }
 
+        // api_list
+        if ($pathinfo === '/api/list') {
+            return array (  '_controller' => 'DM\\Bundle\\DocumentBundle\\Controller\\DefaultController::apiListAction',  '_route' => 'api_list',);
+        }
+
         // post_new_document
         if ($pathinfo === '/post/document') {
             return array (  '_controller' => 'DM\\Bundle\\DocumentBundle\\Controller\\DefaultController::postDocumentAction',  '_route' => 'post_new_document',);
@@ -208,6 +234,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // document_details
         if (0 === strpos($pathinfo, '/document/details') && preg_match('#^/document/details/(?P<slug>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'document_details')), array (  '_controller' => 'DM\\Bundle\\DocumentBundle\\Controller\\DefaultController::documentDetailsAction',));
+        }
+
+        // fos_js_routing_js
+        if (0 === strpos($pathinfo, '/js/routing') && preg_match('#^/js/routing(?:\\.(?P<_format>js|json))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_js_routing_js')), array (  '_controller' => 'fos_js_routing.controller:indexAction',  '_format' => 'js',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

@@ -15,7 +15,11 @@ class DocumentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titre')               
+            ->add('titre', null, array(
+            	'attr' =>array(
+            		'required' =>true
+            		)
+            	))               
             ->add('description','genemu_tinymce',array(
                 'required'=> true
                 ))
@@ -37,7 +41,7 @@ class DocumentType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'DM\Bundle\DocumentBundle\Entity\Document',
-            'required' => true,
+            'required' => false,
         ));
     }
 

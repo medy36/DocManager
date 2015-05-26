@@ -1,6 +1,7 @@
 {% javascripts
    
     "@DMResourceBundle/Resources/public/js/custom.js"
+    "@DMResourceBundle/Resources/public/js/angularCtrls.js"
 
     
     filter='?yui_js' combine=false %}
@@ -17,7 +18,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="{{ asset('bundles/uran1980fancybox/js/fancybox/source/jquery.fancybox.pack.js') }}"></script>
 
-
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+ 
+ 
 
 {% endjavascripts %}
 
