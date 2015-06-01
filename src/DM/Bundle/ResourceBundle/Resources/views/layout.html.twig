@@ -13,6 +13,8 @@
     {% endblock stylesheets %} 
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>  
 
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.js"></script>
+
 
   </head>
   <body ng-app="docManager">
@@ -27,7 +29,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">D.M {% verbatim %} {{ firstName }} {% endverbatim %} </a>
+                <a class="navbar-brand" href="#">D.M {% verbatim %} [[ firstName ]] {% endverbatim %} </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -53,7 +55,6 @@
     <div class="container">
 
         <div class="row">
-
             <div class="col-md-3">
                 <p class="lead">Document Manager</p>
                 <div class="list-group">
@@ -75,8 +76,10 @@
                 </div>
 
                  {% block content %}
+
+                 
           
-        {% endblock content %}
+                 {% endblock content %}
 
             </div>
 

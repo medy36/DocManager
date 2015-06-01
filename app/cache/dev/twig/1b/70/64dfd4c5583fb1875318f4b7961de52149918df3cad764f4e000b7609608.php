@@ -22,129 +22,133 @@ class __TwigTemplate_1b7064dfd4c5583fb1875318f4b7961de52149918df3cad764f4e000b76
 
     protected function doDisplay(array $context, array $blocks = array())
     {
+        // line 2
+        $context["ActivePage"] = "newArchive";
+        // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 4
     public function block_title($context, array $blocks = array())
     {
-        // line 4
+        // line 5
         echo "    <title>Document Manager</title>
 ";
     }
 
-    // line 7
+    // line 9
     public function block_content($context, array $blocks = array())
     {
-        // line 8
+        // line 10
         echo "
+
 \t<h1> insert a new Archive</h1>
 
 
 \t";
-        // line 12
+        // line 15
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("action" => $this->env->getExtension('routing')->getPath("post_new_document"), "method" => "POST", "class" => "form-horizontal"));
         echo "
 \t<fieldset>
 \t ";
-        // line 14
+        // line 17
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
 
 
 \t";
-        // line 17
+        // line 20
         ob_start();
-        // line 18
+        // line 21
         echo "
 \t  <div class=\"form-group\">
 \t    <label for=\"\">";
-        // line 20
+        // line 23
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "titre", array()), 'label');
         echo "</label>
 \t       ";
-        // line 21
+        // line 24
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "titre", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t         <span class=\"text-danger\">  ";
-        // line 22
+        // line 25
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "titre", array()), 'errors');
         echo " </span>  
 \t  </div>\t\t
 \t";
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-        // line 25
+        // line 28
         echo "
 \t";
-        // line 26
+        // line 29
         ob_start();
-        // line 27
+        // line 30
         echo "\t\t <div class=\"form-group\">
 \t\t    <label for=\"\"> ";
-        // line 28
+        // line 31
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description", array()), 'label');
         echo "</label>
 \t\t ";
-        // line 29
+        // line 32
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t   <span class=\"text-danger\">  ";
-        // line 30
+        // line 33
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description", array()), 'errors');
         echo " </span>  
 \t\t  </div>\t\t
 \t";
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-        // line 33
+        // line 36
         echo "
 \t";
-        // line 34
+        // line 37
         ob_start();
-        // line 35
+        // line 38
         echo "\t\t <div class=\"form-group\">
 \t\t    <label for=\"\"> ";
-        // line 36
+        // line 39
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "createdOrigineAt", array()), 'label');
         echo "</label>
 \t\t\t ";
-        // line 37
+        // line 40
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "createdOrigineAt", array()), 'widget', array("attr" => array("class" => "form-control datepicker")));
         echo " 
 \t\t\t   <span class=\"text-danger\">  ";
-        // line 38
+        // line 41
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "createdOrigineAt", array()), 'errors');
         echo " </span>  
 \t\t\t </div>\t\t
 \t";
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-        // line 41
+        // line 44
         echo "
 \t";
-        // line 42
+        // line 45
         ob_start();
-        // line 43
+        // line 46
         echo "\t\t <div class=\"form-group\">\t 
 \t\t\t ";
-        // line 44
+        // line 47
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "file", array()), 'widget');
         echo " 
 \t\t\t   <span class=\"text-danger\">  ";
-        // line 45
+        // line 48
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "file", array()), 'errors');
         echo " </span> 
 \t\t  </div>\t\t
 \t";
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-        // line 48
+        // line 51
         echo "
  \t";
-        // line 49
+        // line 52
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo " 
 \t\t";
-        // line 50
+        // line 53
         ob_start();
-        // line 51
+        // line 54
         echo "\t     <div class=\"form-group\">\t\t   
 \t\t    <div class=\"col-md-4\">
 \t\t\t<button type=\"submit\" formnovalidate = \"true\" class=\"btn btn-primary\">Submit</button>
@@ -152,11 +156,11 @@ class __TwigTemplate_1b7064dfd4c5583fb1875318f4b7961de52149918df3cad764f4e000b76
 \t\t </div>\t
 \t\t  \t";
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-        // line 57
+        // line 60
         echo "\t  
 \t</fieldset>
 \t";
-        // line 59
+        // line 62
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
@@ -175,6 +179,6 @@ class __TwigTemplate_1b7064dfd4c5583fb1875318f4b7961de52149918df3cad764f4e000b76
 
     public function getDebugInfo()
     {
-        return array (  160 => 59,  156 => 57,  148 => 51,  146 => 50,  142 => 49,  139 => 48,  133 => 45,  129 => 44,  126 => 43,  124 => 42,  121 => 41,  115 => 38,  111 => 37,  107 => 36,  104 => 35,  102 => 34,  99 => 33,  93 => 30,  89 => 29,  85 => 28,  82 => 27,  80 => 26,  77 => 25,  71 => 22,  67 => 21,  63 => 20,  59 => 18,  57 => 17,  51 => 14,  46 => 12,  40 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  164 => 62,  160 => 60,  152 => 54,  150 => 53,  146 => 52,  143 => 51,  137 => 48,  133 => 47,  130 => 46,  128 => 45,  125 => 44,  119 => 41,  115 => 40,  111 => 39,  108 => 38,  106 => 37,  103 => 36,  97 => 33,  93 => 32,  89 => 31,  86 => 30,  84 => 29,  81 => 28,  75 => 25,  71 => 24,  67 => 23,  63 => 21,  61 => 20,  55 => 17,  50 => 15,  43 => 10,  40 => 9,  35 => 5,  32 => 4,  28 => 1,  26 => 2,  11 => 1,);
     }
 }

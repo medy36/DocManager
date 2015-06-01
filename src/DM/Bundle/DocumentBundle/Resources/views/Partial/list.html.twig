@@ -1,29 +1,64 @@
 {% extends "DMResourceBundle::layout.html.twig" %}
 {% set ActivePage = "listArchives" %}
-
 {% block title %}
-    <title>List - New application</title>
+	<title>List - New application</title>
 {% endblock %}
-
 {% block content %}
-
 	<!-- Page Content -->
-    <div id="page-content-wrapper">       
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
+			<div class="row">
+				<div ng-controller="docList" class="col-md-10 col-md-offset-1">
+					<h1></h1>
+					<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-heading"><h1>Document list</h1></div>
+						<div class="panel-body">
+							<p>This is the list of documents :</p>
+						</div>
+						<!-- Table  -->
+						{# button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> #}
 
-        <div class="container-fluid">
-            <div class="row">
-                <div ng-controller="docList" class="col-md-10 col-md-offset-1">
-                	<h1>Welcome to the Post:index page</h1>
-                	{% verbatim %}
-                		<div ng-repeat="document in documents">
-                			hello:
-	                	  <h1>{{ document.titre }}<h1>
-	                	</div>
-                		
-                	{% endverbatim %}
-                	
+							<!-- Modal -->
+							<div id="myModal" class="modal fade" role="dialog">
+							  <div class="modal-dialog">
+
+							    <!-- Modal content-->
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal">&times;</button>
+							        <h4 class="modal-title">Modal Header</h4>
+							      </div>
+							      <div class="modal-body">
+							      	<div ng-view > </div>
+							        <p>Some text in the modal.</p>
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							      </div>
+							    </div>
+
+							  </div>
+							</div>
+						
+						
+						<table class="table">
+							<tbody>			
+								<tr ng-repeat="document in documents">
+																					
+									<th><a href="#docDetails/[[document.id]]" ng-click="open()" data-toggle="modal" data-target="#myModal">
+										[[document.titre]] </a></th>	
+									
+								</tr>							
+							</tbody>
+							
+						</table>
+				
 				</div>
+				
+				
 			</div>
 		</div>
 	</div>
+</div>
 {% endblock content %}

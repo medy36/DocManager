@@ -89,6 +89,7 @@ class DefaultController extends Controller {
 	 * @FW\Template()
 	 */
 	public function documentDetailsAction($slug) {
+
 		$document = $this->getDoctrine()
 		                 ->getRepository('DMDocumentBundle:Document')
 		                 ->findOneById($slug);
@@ -99,9 +100,12 @@ class DefaultController extends Controller {
 			);
 		}
 
-		return $this->render('DMDocumentBundle:Partial:details.html.twig', array(
-			'document' => $document,
-		));
+		$serializer = $this->container->get('jms_serializer');
+		return new Response($serializer->serialize($document, 'json'));
+
+		// return $this->render('DMDocumentBundle:Partial:details.html.twig', array(
+		// 	'document' => $document,
+		// ));
 
 	}
 

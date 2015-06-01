@@ -47,15 +47,20 @@ class __TwigTemplate_a98841ff000ff2a87d60f1bef38350746a794686a53d968563bb2e9692a
         // line 19
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/uran1980fancybox/js/fancybox/source/jquery.fancybox.pack.js"), "html", null, true);
         echo "\"></script>
+    <script src=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("view/document/details.html"), "html", null, true);
+        echo "\" type=\"text/html\" charset=\"utf-8\" async defer></script>
 
     <script src=\"";
-        // line 21
+        // line 22
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/fosjsrouting/js/router.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 22
+        // line 23
         echo $this->env->getExtension('routing')->getPath("fos_js_routing_js", array("callback" => "fos.Router.setData"));
         echo "\"></script>
+
  
  
 
@@ -91,21 +96,26 @@ class __TwigTemplate_a98841ff000ff2a87d60f1bef38350746a794686a53d968563bb2e9692a
         // line 19
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/uran1980fancybox/js/fancybox/source/jquery.fancybox.pack.js"), "html", null, true);
         echo "\"></script>
+    <script src=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("view/document/details.html"), "html", null, true);
+        echo "\" type=\"text/html\" charset=\"utf-8\" async defer></script>
 
     <script src=\"";
-        // line 21
+        // line 22
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/fosjsrouting/js/router.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 22
+        // line 23
         echo $this->env->getExtension('routing')->getPath("fos_js_routing_js", array("callback" => "fos.Router.setData"));
         echo "\"></script>
+
  
  
 
 ";
         unset($context["asset_url"]);
-        // line 27
+        // line 29
         echo "
 ";
     }
@@ -122,6 +132,6 @@ class __TwigTemplate_a98841ff000ff2a87d60f1bef38350746a794686a53d968563bb2e9692a
 
     public function getDebugInfo()
     {
-        return array (  109 => 27,  101 => 22,  97 => 21,  92 => 19,  84 => 14,  81 => 13,  75 => 11,  73 => 10,  69 => 9,  66 => 8,  57 => 22,  53 => 21,  48 => 19,  40 => 14,  37 => 13,  31 => 11,  29 => 10,  25 => 9,  22 => 8,  19 => 1,);
+        return array (  119 => 29,  110 => 23,  106 => 22,  101 => 20,  97 => 19,  89 => 14,  86 => 13,  80 => 11,  78 => 10,  74 => 9,  71 => 8,  61 => 23,  57 => 22,  52 => 20,  48 => 19,  40 => 14,  37 => 13,  31 => 11,  29 => 10,  25 => 9,  22 => 8,  19 => 1,);
     }
 }

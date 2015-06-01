@@ -1,31 +1,20 @@
-{% extends "DMResourceBundle::layout.html.twig" %}
-{% set ActivePage = "detailsArchive" %}
+<div class="col-md-9" ng-controller="docDetails">
 
-{% block title %}
-    <title>{{ document.titre }} - New application</title>
-{% endblock %}
+    <div class="thumbnail">     
 
+    	<a id="single_1" class="fancybox" href="{{ vich_uploader_asset(documentt, 'file') }}" ><img  src="{{ vich_uploader_asset('[['documentt']]', 'file') }}" alt="[[ documentt.imageName ]]" /></a>
 
-
-{% block content %}
-
-
- <div class="col-md-9">
-
-    <div class="thumbnail">
-        <a id="single_1" class="fancybox" href="{{ vich_uploader_asset(document, 'file') }}" ><img  src="{{ vich_uploader_asset(document, 'file') }}" alt="{{ document.imageName }}" /></a>
          
              <div class="caption-full">
-            	<h4 class="pull-right">{{ document.createdOrigineAt|date('Y-m-d') }}</h4>
-	            <h4><a href="#">{{ document.titre }}</a></h4>
+            	<h4 class="pull-right">[[ documentt.createdOrigineAt | date ]] </h4>
+	            <h4><a href="#">[[ documentt.titre ]] </a></h4>
 	            
-	            <p>{{ document.description|raw}}</p>
+	            <p> [[ documentt.description]] </p>
 
-	            <h4 class="pull-left">  Posted at:{{document.createdAt|date('Y-m-d')}}</h4>
+	            <h4 class="pull-left">  Posted at:[[ documentt.createdAt | myfilter:date ]] </h4>
 	           
 	        </div>
     </div>
 </div>
 
-{% endblock %}
 

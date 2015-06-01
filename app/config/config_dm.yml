@@ -34,4 +34,4 @@ genemu_form:
         theme:   modern
 
 fos_js_routing:
-    routes_to_expose: [ list_documents, api_list]
+    routes_to_expose: [ list_documents, api_list, document_details]

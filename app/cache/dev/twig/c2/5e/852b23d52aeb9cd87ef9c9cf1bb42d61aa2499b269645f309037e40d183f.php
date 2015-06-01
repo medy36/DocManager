@@ -43,6 +43,8 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
         echo " 
         <script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js\"></script>  
 
+        <script src=\"http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.js\"></script>
+
 
   </head>
   <body ng-app=\"docManager\">
@@ -58,8 +60,8 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
                     <span class=\"icon-bar\"></span>
                 </button>
                 <a class=\"navbar-brand\" href=\"#\">D.M ";
-        // line 30
-        echo " {{ firstName }} ";
+        // line 32
+        echo " [[ firstName ]] ";
         echo " </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -86,12 +88,11 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
     <div class=\"container\">
 
         <div class=\"row\">
-
             <div class=\"col-md-3\">
                 <p class=\"lead\">Document Manager</p>
                 <div class=\"list-group\">
                     <a href=\"";
-        // line 60
+        // line 61
         echo $this->env->getExtension('routing')->getPath("post_new_document");
         echo "\" class=\"list-group-item ";
         if (((isset($context["ActivePage"]) ? $context["ActivePage"] : $this->getContext($context, "ActivePage")) == "newArchive")) {
@@ -99,7 +100,7 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
         }
         echo "\">add new doc</a>
                     <a href=\"";
-        // line 61
+        // line 62
         echo $this->env->getExtension('routing')->getPath("list_documents");
         echo "\" class=\"list-group-item ";
         if (((isset($context["ActivePage"]) ? $context["ActivePage"] : $this->getContext($context, "ActivePage")) == "listArchives")) {
@@ -107,7 +108,7 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
         }
         echo "\">list Docs</a>
                     <a href=\"#\" class=\"list-group-item ";
-        // line 62
+        // line 63
         if (((isset($context["ActivePage"]) ? $context["ActivePage"] : $this->getContext($context, "ActivePage")) == "logArchive")) {
             echo " active ";
         }
@@ -127,9 +128,9 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
                 </div>
 
                  ";
-        // line 77
+        // line 78
         $this->displayBlock('content', $context, $blocks);
-        // line 80
+        // line 83
         echo "
             </div>
 
@@ -138,9 +139,9 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
 
 
     ";
-        // line 87
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 90
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 93
         echo "
     
 </body>
@@ -163,21 +164,23 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
     ";
     }
 
-    // line 77
+    // line 78
     public function block_content($context, array $blocks = array())
     {
-        // line 78
-        echo "          
-        ";
+        // line 79
+        echo "
+                 
+          
+                 ";
     }
 
-    // line 87
+    // line 90
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 88
+        // line 91
         echo "     ";
-        $this->loadTemplate("DMResourceBundle:Partial:_javascripts.html.twig", "DMResourceBundle::layout.html.twig", 88)->display($context);
-        // line 89
+        $this->loadTemplate("DMResourceBundle:Partial:_javascripts.html.twig", "DMResourceBundle::layout.html.twig", 91)->display($context);
+        // line 92
         echo "    ";
     }
 
@@ -193,6 +196,6 @@ class __TwigTemplate_c25e852b23d52aeb9cd87ef9c9cf1bb42d61aa2499b269645f309037e40
 
     public function getDebugInfo()
     {
-        return array (  181 => 89,  178 => 88,  175 => 87,  170 => 78,  167 => 77,  160 => 12,  157 => 11,  152 => 8,  144 => 90,  142 => 87,  133 => 80,  131 => 77,  111 => 62,  103 => 61,  95 => 60,  62 => 30,  43 => 13,  41 => 11,  37 => 9,  35 => 8,  31 => 7,  23 => 1,);
+        return array (  184 => 92,  181 => 91,  178 => 90,  171 => 79,  168 => 78,  161 => 12,  158 => 11,  153 => 8,  145 => 93,  143 => 90,  134 => 83,  132 => 78,  112 => 63,  104 => 62,  96 => 61,  64 => 32,  43 => 13,  41 => 11,  37 => 9,  35 => 8,  31 => 7,  23 => 1,);
     }
 }

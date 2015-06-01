@@ -3236,6 +3236,7 @@
       <argument type="collection">
         <argument>list_documents</argument>
         <argument>api_list</argument>
+        <argument>document_details</argument>
       </argument>
       <argument>/var/www/html/DocManager/app/cache/dev</argument>
       <argument type="collection">
